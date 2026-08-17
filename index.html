@@ -12,13 +12,31 @@
 
       <div class="composer">
         <input id="title" type="text" placeholder="What needs doing? (e.g. Submit report)" />
-        <input id="when" type="text" placeholder="When? (e.g. by Friday 5pm, in 2 hours, tomorrow 9am)" />
+        <input id="when" type="text" placeholder="When? (e.g. Friday 5pm, in 2 hours, tomorrow 9am)" />
+
+        <div class="row">
+          <label for="remind">Remind me</label>
+          <select id="remind">
+            <option value="0">At the deadline</option>
+            <option value="5">5 min before</option>
+            <option value="15">15 min before</option>
+            <option value="30">30 min before</option>
+            <option value="60">1 hour before</option>
+            <option value="1440">1 day before</option>
+          </select>
+        </div>
+
         <div id="preview" class="preview"></div>
-        <button id="add">Add task</button>
+
+        <div class="actions">
+          <button id="add">Add task</button>
+          <button id="cancel" class="ghost" style="display: none">Cancel</button>
+        </div>
       </div>
 
       <ul id="list" class="list"></ul>
       <p id="empty" class="empty">No tasks yet. Add one above.</p>
+      <button id="clearDone" class="ghost clear" style="display: none">Clear completed</button>
     </main>
 
     <script type="module" src="/src/main.ts"></script>
