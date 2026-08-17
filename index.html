@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Planner</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Day Planner</h1>
+
+      <div class="composer">
+        <input id="title" type="text" placeholder="What needs doing? (e.g. Submit report)" />
+        <input id="when" type="text" placeholder="When? (e.g. by Friday 5pm, in 2 hours, tomorrow 9am)" />
+        <div id="preview" class="preview"></div>
+        <button id="add">Add task</button>
+      </div>
+
+      <ul id="list" class="list"></ul>
+      <p id="empty" class="empty">No tasks yet. Add one above.</p>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
